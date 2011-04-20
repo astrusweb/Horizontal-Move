@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Date: 20-04-2011 (April 20, 2011)
+ * Date: 04-20-2011 (April 20, 2011)
  */
 
 (function($) {
