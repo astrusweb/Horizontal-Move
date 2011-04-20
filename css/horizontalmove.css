@@ -1,0 +1,51 @@
+
+.horizontalmove {
+  position: relative;
+}
+
+  .horizontalmove-mask {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 150px;
+    border: solid 3px #CCC;
+    margin: 0 auto;
+  }
+
+  .horizontalmove-main {
+    position: absolute;
+    height: 100%;
+  }
+
+  .horizontalmove-left,
+  .horizontalmove-right {
+    cursor: pointer;
+  }
+
+  .horizontalmove-left {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+  }
+
+  .horizontalmove-right {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+  }
+
+  .horizontalmove-item {
+    float: left;
+    height: 100%;
+    width: 400px;
+  }
+
+    .horizontalmove-item img {
+      float: left;
+    }
+
+    .horizontalmove-item p {
+      float: left;
+      width: 150px;
+      margin-left: 15px;
+    }

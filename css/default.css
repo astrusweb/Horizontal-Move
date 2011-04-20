@@ -1,0 +1,19 @@
+
+body {
+  background: #000;
+  font: 12px/20px Arial, sans-serif;
+  color: #fff;
+}
+
+#content {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#logo {
+  margin: 20px 0;
+}
+
+#description {
+  margin-bottom: 25px;
+}
