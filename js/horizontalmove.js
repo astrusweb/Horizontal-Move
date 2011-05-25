@@ -1,5 +1,5 @@
 /*
- * jQuery Horizontal Move Plugin Beta 1.0
+ * jQuery Horizontal Move Plugin Beta 1.2
  * http://astrusweb.com/
  *
  * Copyright 2011 Astrusweb.com
@@ -12,19 +12,21 @@
 (function($) {
 
     $.fn.horizontalmove = function(options) {
-
+        
         var movements = [];
         var page = !options.page ? 0 : options.page;
+        var time = !options.time ? 1200 : options.time;
+        var ease = !options.ease ? 'easeInOutQuart' : options.ease;
 
         var main_width = 0,
             calc = 0,
             rest = 0;
-
+        
         // cache
         var $this = $(this);
         var main = $this.find('.horizontalmove-main:first');
         var mask = $this.find('.horizontalmove-mask:first');
-
+        
         $this.find('.horizontalmove-item').each(function(){
             main_width += $(this).width();
         });
@@ -38,7 +40,8 @@
         calc = main.width() / mask.width();
         desloc = Math.floor(calc);
 
-        if (calc != desloc) {
+        if (calc != desloc) 
+        {
             rest = main.width() - (mask.width() * desloc);
             desloc++;
         }
@@ -50,13 +53,18 @@
                 movements.push( mask.width() * i );
             }
         }
-
+        
         var move = function(){
             main.stop().animate({
                 left: - movements[page]
-            }, 1200, 'easeInOutQuart');
+            }, time, ease,function(){!options.onComplete ? '' : options.onComplete(true)});
         };
 
+        if(page > 0)
+        {
+          move(page);
+        }
+        
         $this.find('.horizontalmove-left').click(function(){
             page--;
             if (page < 0) {

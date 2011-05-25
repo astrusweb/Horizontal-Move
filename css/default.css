@@ -17,3 +17,22 @@ body {
 #description {
   margin-bottom: 25px;
 }
+
+
+.obs{
+    text-align: left;
+    margin-top: 20px;
+}
+
+    .obs p{
+        text-align: left;
+        font-size: 15px;
+    }
+
+#my-gallery2{
+    margin-top: 30px;
+}
+
+h2 a{
+    color: #FFF;
+}
