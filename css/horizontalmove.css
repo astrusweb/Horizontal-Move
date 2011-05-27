@@ -16,13 +16,13 @@
     position: absolute;
     height: 100%;
   }
-
+  
   .horizontalmove-left,
   .horizontalmove-right {
     cursor: pointer;
   }
 
-  .horizontalmove-left {
+  .horizontalmove-left{
     position: absolute;
     left: 20px;
     top: 50px;
